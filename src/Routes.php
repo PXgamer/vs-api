@@ -3,12 +3,12 @@
 namespace VS\Api;
 
 use System\Route;
-use VS\Framework\Controller\Main;
+use VS\Framework\Routing\PluginRoute;
 
 /**
  * Class Routes
  */
-class Routes
+class Routes extends PluginRoute
 {
     const CONTROLLERS = '\\VS\\Api\\Controller\\';
 
