@@ -1,0 +1,10 @@
+{
+  "name": "vs/api",
+  "description": "The API module for VS.",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "VS\\Api\\": "src/"
+    }
+  }
+}
