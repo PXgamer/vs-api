@@ -17,7 +17,9 @@ class Routes extends PluginRoute
      * @return Route
      */
     public static function Register(Route $Route)
-    {
+    {		
+        $Route->get('/api', [self::CONTROLLERS . 'Api', 'index']);
+		
         return $Route;
     }
 }
