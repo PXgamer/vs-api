@@ -60,6 +60,24 @@ class Api extends Controller
         );
     }
 
+    public function users($username)
+    {
+        $this->requireAuth();
+		
+		if (isset($username) && $username != '') {
+			$this->db->prepare('SELECT id, username FROM users');
+		}
+		
+        header(self::HTTP_OK);
+        self::json(
+            [
+                'status' => true,
+                'http_code' => 200,
+                'response' => $response
+            ]
+        );
+    }
+
     private function requireAuth()
     {
         if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])) {
